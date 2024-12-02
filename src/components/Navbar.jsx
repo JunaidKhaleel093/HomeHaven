@@ -60,25 +60,36 @@ export default function Navbar({ cartItemsCount, toggleCart, isDark, toggleTheme
             className="relative p-2"
             aria-label="Shopping Cart"
           >
-            <ShoppingCart className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-            {cartItemsCount > 0 && (
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                {cartItemsCount}
-              </span>
-            )}
+            <span className="relative">
+              <ShoppingCart className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              {cartItemsCount > 0 && (
+                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                  {cartItemsCount}
+                </span>
+              )}
+            </span>
           </motion.button>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="ml-4 md:hidden"
+            className="ml-4 md:hidden focus:outline-none"
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-            )}
+            <div className="relative flex flex-col justify-center items-center w-8 h-8">
+              <motion.div
+                animate={isMenuOpen ? { rotate: 45, y: 5 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-gray-700 dark:bg-gray-300 transition-transform"
+              ></motion.div>
+              <motion.div
+                animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-6 h-0.5 bg-gray-700 dark:bg-gray-300 my-1"
+              ></motion.div>
+              <motion.div
+                animate={isMenuOpen ? { rotate: -45, y: -5 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-gray-700 dark:bg-gray-300 transition-transform"
+              ></motion.div>
+            </div>
           </button>
         </div>
       </div>
