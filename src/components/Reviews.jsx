@@ -22,7 +22,7 @@ export default function Review() {
           </div>
 
           <div className="review-card">
-            <img src="https://avatarfiles.alphacoders.com/375/thumb-350-375139.webp" alt="Customer 2" />
+            <img src="https://sp.yimg.com/ib/th?id=OIP.rmiw23TAVMxatEZxN9Ih3AHaHa&pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="Customer 2" />
             <p>
               <strong>Review by:</strong>
             </p>
@@ -31,7 +31,7 @@ export default function Review() {
             <p>
               “Absolutely thrilled with my new sofa! The quality is top-notch,
               and the delivery was right on time. It looks fantastic in my
-              living room—highly recommend!” - Misba
+              living room—highly recommend!” - Sukuna
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Review() {
             <p>
               “I love my new dining table from HomeHaven! It's exactly what I
               was looking for—stylish, sturdy, and fits perfectly in my space.
-              Great customer service too!” - Junaid
+              Great customer service too!” - Gojo 
             </p>
           </div>
         </div>
